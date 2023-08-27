@@ -1,0 +1,17 @@
+---
+interface Props {
+	url: string;
+    title: string;
+}
+
+const { url, title } = Astro.props;
+---
+<a href={url} target="_blank" class="w-12 h-12 md:w-16 md:h-16 group flex justify-center">
+    <div class="-mt-6 invisible justify-center items-center absolute opacity-0 w-fit group-hover:visible group-focus:visible group-hover:opacity-100 group-focus:opacity-100 transition-all duration-200 ease-in-out bg-cosmic-gray text-white p-2 rounded-md text-center text-xs md:text-sm z-10">
+        {title}
+    </div>
+    <div class="justify-center items-center w-full h-full text-cosmic-gray group-hover:text-cosmic-red group-focus:text-cosmic-red duration-200 ease-in-out transition-colors z-0" >
+        <slot />
+    </div>
+    
+</a>

@@ -1,0 +1,21 @@
+---
+import Link from '../components/Link.astro';
+import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon'
+
+export const prerender = true;
+---
+
+<Layout title="Cosmic's Links">
+	<div class="flex h-full w-full justify-center items-center md:gap-x-2">
+		<div class="grid grid-cols-2 grid-rows-3 gap-1 m-1 md:gap-2">
+			<Link url="https://github.com/cosrnic" title="GitHub"><Icon name="mdi:github" /></Link>
+			<Link url="https://cosrnic.dev" title="Website"><Icon name="gg:website" /></Link>
+			<Link url="https://twitter.com/nottypesafe" title="Twitter/X"><Icon name="mdi:twitter" /></Link>
+			<Link url="https://steamcommunity.com/id/cosmicuk/" title="Steam"><Icon name="mdi:steam" /></Link>
+			<Link url="https://twitch.tv/cosrnic" title="Twitch"><Icon name="mdi:twitch" /></Link>
+			<Link url="https://youtube.com/@nottypesafe" title="YouTube"><Icon name="mdi:youtube" /></Link>
+		</div>
+		<img src="/favicon.png" class="w-48 h-48 md:w-64 md:h-64" />
+		</div>
+</Layout>
